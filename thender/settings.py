@@ -36,7 +36,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tinder.urls'
+ROOT_URLCONF = 'thender.urls'
 
 TEMPLATES = [
     {
@@ -54,7 +54,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tinder.wsgi.application'
+WSGI_APPLICATION = 'thender.wsgi.application'
 
 
 # Database
