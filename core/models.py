@@ -1,6 +1,12 @@
 from django.db import models
 
 
+class Posicionamento(models.Model):
+    tag = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.tag
+
 class Candidato(models.Model):
     nome = models.CharField(max_length=100)
     foto = models.ImageField(upload_to='uploads/candidatos/',
@@ -9,8 +15,7 @@ class Candidato(models.Model):
     nascimento = models.DateField()
     formacao = models.CharField(max_length=100, blank=True)
     renda_declarada = models.FloatField()
-    posicionamento = models.CharField(max_length=100, blank=True)
+    posicionamento = models.ManyToManyField(Posicionamento, blank=True)
 
     def __str__(self):
         return self.nome
-
